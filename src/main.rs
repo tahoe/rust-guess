@@ -30,14 +30,17 @@ fn main() {
 
         print!("Chance {}, Please input your guess: ", chance + 1);
 
+        // weee, mutability
         chance = chance + 1;
-        // this actually provide an error if flush() fails though
-        // which is better, though unlikely to happen
+
+        // this will actually provide an error if flush() fails
         io::stdout()
             .flush()
             .expect("Ooops! Your terminal had a problem!");
 
         // create a new mutable string named guess that is empty
+        // it needs to be mutable because we are going to populate it
+        // afterward AND going to convert it after input into an Int (u32)
         let mut guess = String::new();
 
         // read from stdin, putting whatever the user types
@@ -48,10 +51,11 @@ fn main() {
 
         // try to convert the input string to a u32 integer, which we need
         // in order to compare with our secret_number string
-        // which is a u32 integer
+        // which is a u32 integer by default (floats are 64bit by default)
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => {
+                // {} are expressions, I can even put in comments
                 println!("You fucking moron! I said a number!");
                 continue;
             }
