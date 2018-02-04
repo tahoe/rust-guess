@@ -57,16 +57,14 @@ fn main() {
             }
         };
 
-        println!("You guessed: {}", guess);
-
         // .cmp on an variable object like guess returns an Ordering type
         // which match uses to print a message depending on the Ordering
         // variant returned by cmp
         // Ordering is an Enum type with Less Greater and Equal options
         // I'm guessing for number types, may be different for other types
         match guess.cmp(&secret_number) {
-            Ordering::Less => println!("Too small!"),
-            Ordering::Greater => println!("Too big!"),
+            Ordering::Less => println!("Sorry, {} is too small!", guess),
+            Ordering::Greater => println!("Sorry, {} is Too big!", guess),
             Ordering::Equal => {
                 println!("You win! And you did it in {} chances!", chance);
                 break;
