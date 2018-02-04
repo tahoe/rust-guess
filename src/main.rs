@@ -22,12 +22,13 @@ fn main() {
 
     // loop until the user guesses correctly what number we have
     loop {
-        print!("Chance {}, Please input your guess: ", chance + 1);
-
-        if chance > MAX_CHANCES {
+        // first thing, check our chance
+        if chance >= MAX_CHANCES {
             println!("You moron, the answer is {}", secret_number);
             break;
         }
+
+        print!("Chance {}, Please input your guess: ", chance + 1);
 
         chance = chance + 1;
         // this actually provide an error if flush() fails though
