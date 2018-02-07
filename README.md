@@ -1,4 +1,4 @@
-% Play a game of guess that number!
+# Play a game of guess that number!
 
 To make this easier on me since I'm new,
 if whatever you enter isn't convertable to a float
