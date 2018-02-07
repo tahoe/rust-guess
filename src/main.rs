@@ -1,6 +1,6 @@
 //! Play a game of guess that number!
 //!
-//! To make this easier on me since I'm new
+//! To make this easier on me since I'm new,
 //! if whatever you enter isn't convertable to a float
 //! I will default to 128 and you will get however many guesses
 //! 128 requires
