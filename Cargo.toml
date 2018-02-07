@@ -1,7 +1,10 @@
 [package]
-name = "g_g"
-version = "0.1.0"
+name = "gg"
+version = "1.0.0"
 authors = ["Dennis Durling <djdtahoe@gmail.com>"]
 
 [dependencies]
+console = "0.6.1"
+termion = "1.5.1"
+clap = "2.29.3"
 rand = "0.3.14"
