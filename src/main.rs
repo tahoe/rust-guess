@@ -1,3 +1,27 @@
+//! Play a game of guess that number!
+//!
+//! To make this easier on me since I'm new
+//! if whatever you enter isn't convertable to a float
+//! I will default to 128 and you will get however many guesses
+//! 128 requires
+//!
+//! #Examples
+//!
+//! ```
+//! gg 500
+//! Let's play "Guess that number"
+//! I'm thinking of a number from 1 to 500
+//! You get 9 chances before I start calling you names
+//! Chance 1, Please input your guess:
+//! ```
+//! ```
+//! gg 500000
+//! Let's play "Guess that number!"
+//! I'm thinking of a number from 1 to 500000
+//! You get 19 chances before I start calling you names
+//! Chance 1, Please input your guess:
+//! ```
+
 #[macro_use]
 extern crate clap;
 extern crate rand;
@@ -37,7 +61,7 @@ fn main() {
     let max_chances = topend.log2().ceil() as u32;
     let topend = topend as u32;
 
-    println!("Let's play 'Guess that numbrer!' {}", max_chances);
+    println!("Let's play 'Guess that number!'");
 
     // create a random number from 1 to 100
     let secret_number = rand::thread_rng().gen_range(1, topend);
