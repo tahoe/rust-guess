@@ -5,7 +5,7 @@ if whatever you enter isn't convertable to a float
 I will default to 128 and you will get however many guesses
 128 requires
 
-# Help output when nothing is given
+## Help output when nothing is given
 
 ```
 error: The following required arguments were not provided:
@@ -17,7 +17,7 @@ USAGE:
 For more information try --help
 ```
 
-# Default when input is broken
+## Default when input is broken
 ```
 gg ff?
 Let's play "Guess that numbrer!" 7
@@ -26,7 +26,7 @@ You get 7 chances before I start calling you names
 Chance 1, Please input your guess:
 ```
 
-# Examples
+## Examples
 
 ```
 gg 500
