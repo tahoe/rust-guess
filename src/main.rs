@@ -63,8 +63,7 @@ fn main() {
         .version("1.0")
         .author("Buttery Hips. <butteryhips@gmail.com>")
         .about("Guessing game from 1 to whatever you want")
-        .arg(
-            Arg::with_name("num")
+        .arg(Arg::with_name("num")
                 .short("num")
                 .required(true)
                 .takes_value(true)
